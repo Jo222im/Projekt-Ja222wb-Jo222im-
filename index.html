@@ -1,0 +1,195 @@
+﻿<!doctype html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8" /> 
+	<title>OneHabit - Fulfil your everyday life</title>
+    <link rel="Stylesheet" href="css/Stylesheet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!--Gör så att mobiler inte kan zooma-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> <!--Jquery för responsiv meny-->
+    <script>/*Jquery för responsiv meny*/
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="body"> 
+    <div class="container">
+        <header class="mainHeader">
+            <img id="logo" src="pics/logo.png" alt="Company Logotype, One Habit" />
+            <a class="linkhead" href ="index.html"><img id="devicelogo" src="pics/devicelogo.png" alt="Company Logotype, One Habit"></a> <!--Responsivaloggan som är klickbar till index-->
+            <nav class="navigation">
+                <ul class="navigation">
+                    <li class='active'><a href='index.html'><span>Home</span></a></li>
+                    <li><a href='./pages/AboutUs.html'><span>About Us</span></a></li>
+                    <li><a href='./pages/blog.html'><span>Blog</span></a></li>
+                    <li><a href='./pages/Contact.html'><span>Contact</span></a></li>
+                </ul>
+                <a href="#" id="pull">Menu</a> <!--Meny knappen som kommer upp vid mindre skärmar-->
+            </nav>
+            <div id="headerOne"><img src="pics/test.png" alt="Header"></div>
+            
+        </header>
+
+        <div class="mainContent">
+            <h2 id=titelHead>Our new prints</h2>
+
+            <!--Har en gömd div för responsiv design-->
+            <div class="pictureshide">
+                <div class="i1">
+                    <div class="fade">
+                        <img src="pics/bild17.jpg" alt="sea" id="Img1">
+                    </div>
+                </div>
+                <div class="i2">
+                    <div class="fade">
+                        <img src="pics/bild2.jpg" alt="sea" id="Img2">
+                    </div>
+                </div>
+                <div class="i3">
+                    <div class="fade">
+                        <img src="pics/bild15.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i4">
+                    <div class="fade">
+                        <img src="pics/bild11.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i6">
+                    <div class="fade">
+                        <img src="pics/bild5.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i7">
+                    <div class="fade">
+                        <img src="pics/bild7.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i8">
+                    <div class="fade">
+                        <img src="pics/bild13.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i9">
+                    <div class="fade">
+                        <img src="pics/bild18.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i10">
+                    <div class="fade">
+                        <img src="pics/bild9.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i11">
+                    <div class="fade">
+                        <img src="pics/bild12.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pictures">
+                <div class="i1">
+                    <div class="fade">
+                        <img src="pics/bild17.jpg" alt="sea" id="fadeImage">
+                    </div>
+                </div>
+                <div class="i2">
+                    <div class="fade">
+                        <img src="pics/bild2.jpg" alt="sea" id="fadeImage2">
+                    </div>
+                </div>
+                <div class="i3">
+                    <div class="fade">
+                        <img src="pics/bild15.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i4">
+                    <div class="fade">
+                        <img src="pics/bild11.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i6">
+                    <div class="fade">
+                        <img src="pics/bild5.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i7">
+                    <div class="fade">
+                        <img src="pics/bild7.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i8">
+                    <div class="fade">
+                        <img src="pics/bild13.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i9">
+                    <div class="fade">
+                        <img src="pics/bild18.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i10">
+                    <div class="fade">
+                        <img src="pics/bild9.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+                <div class="i11">
+                    <div class="fade">
+                        <img src="pics/bild12.jpg" alt="sea" class="fadeImage">
+                    </div>
+                </div>
+            </div>
+
+                <div class="latestblog">
+                    <h2> Latest Blogpost's</h2>
+                </div>
+                <div id="blogpitch">
+                    <a href="pages/Blog.html#blog1"><!--Ankarlänk till blogg-->
+                        <aside class="sideBar">
+                            <article>
+                                <h2>Welcome to us</h2>
+                                <p>Our first letters on the web. Take a look!</p>
+                            </article>
+                        </aside>
+                    </a>
+                    <a href="pages/Blog.html#blog2">
+                        <aside class="sideBar">
+                            <article>
+                                <h2>Happy Hollidays</h2>
+                                <p>Hello Folks.I'm texing in last minute</p>
+                            </article>
+                        </aside>
+                    </a>
+                    <a href="pages/Blog.html#blog3">
+                        <aside class="sideBar">
+                            <article>
+                                <h2>In the factory</h2>
+                                <p>Today, Jens and Jesper went down town</p>
+                            </article>
+                        </aside>
+                    </a>
+                </div>
+
+        </div>
+
+        <footer class="huvudFooter">
+            <p> &copy; OneHabit. Some rights reserved. Updated 2013-12-17 | <a>Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>

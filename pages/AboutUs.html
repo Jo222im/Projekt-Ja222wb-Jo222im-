@@ -1,0 +1,107 @@
+﻿<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <title>OneHabit - Fulfil your everyday life</title>
+    <link rel="Stylesheet" href="../css/Stylesheet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--Gör så att mobiler inte kan zooma-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><!--Jquery för responsiv meny-->
+    <script type="text/javascript">
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="body">
+    <header class="mainHeader">
+        <img id="logo" src="../pics/logo.png" alt="Company Logotype, One Habit" />
+        <a class="linkhead" href="../index.html"><img id="devicelogo" src="../pics/devicelogo.png" alt="Company Logotype, One Habit"></a><!--Responsivaloggan som är klickbar till index-->
+        <nav>
+            <ul id="menu">
+                <li><a href='../index.html'><span>Home</span></a></li>
+                <li class='active'><a href='AboutUs.html'><span>About Us</span></a></li>
+                <li><a href='blog.html'><span>Blog</span></a></li>
+                <li><a href='contact.html'><span>Contact</span></a></li>
+            </ul>
+            <a href="#" id="pull">Menu</a><!--Meny knappen som kommer upp vid mindre skärmar-->
+        </nav>
+        <div id="headerOne"><img src="../pics/test.png" alt="Header"></div>
+    </header>
+
+
+    <div class="mainContent">
+        <div class="wrapper">
+
+            <div id="left"> <!--Div som gör att vi kan ha som två spalter(kolumner)-->
+                <div class="blueabout">
+                    <p class="bigp">About the company</p>
+                </div>
+                <div class="topabout">
+                    <h3>Welcome to a brand new thinking</h3>
+                    <p>We that work on this awesome place are two young and smart people. We have no limits!</p>
+                </div>
+                <div class="picAbout">
+                    <img id="img1" src="../pics/monkeyfood.jpg" alt="picture of a monkey smoking">
+                    <img  src="../pics/tankfood.jpg" alt="picture of a trunk with monkey">
+                    <img  src="../pics/pillowfood.jpg" alt="picture of mug with monkey">
+                    <img  src="../pics/cheers.jpg" alt="picture of a pillow">
+                    <img class="img3" src="../pics/cheers2.jpg" alt="Two classes cheers t-shirt">
+                    <img class="img3" src="../pics/cheers1.jpg" alt="Two classes cheers pillow">
+                </div>
+
+                <p class="abouttext">
+                     <strong>OneHabbit</strong> began in december 2012 as a research project by Jens Ax and Jesper Obrelius, students at Linneus university who were working on web development. Their goal was “to develop the enabling technologies for a single, integrated and universal digital website during good graphics. Their business idea was to sell the stylish and casual art. In search of a dissertation theme, Page considered—among other things—exploring the mathematical properties of the World Wide Web,
+                     understanding its link structure as a huge graph. Their supervisor, Morgan Rydbrink, encouraged them to pick this idea (which Page later recalled as "the best advice I ever got")
+                </p>
+            </div>
+
+            <div id="right"> <!--Div som gör att vi kan ha som två spalter(kolumner)-->
+
+               <div class="rightabout">
+                   <p class="bigp">Founders and CEO</p>
+                </div>
+                <div class="aboutjens">
+                    <p class="textname">Jens Ax</p>
+                        <img class="ceopic" src="../pics/jensceo.jpg" alt="picture of jens" >
+                            <p class ="aboutpadding">
+                                Jens was born in the south of Sweden during the late 80's. Under high school he tooked some classes focuses on web design and falled in love with the work.
+                                Today Jens is more focused in interactiondesign and will gradiate university about some years. Today his target is to be a teamleader (ixd-syntesizer) and also work as generator.
+                            </p>
+                </div>
+                <div class="aboutjesper">
+                    <p class="textname">Jesper Obrelius</p>
+
+                    <img class="ceopic" src="../pics/jesperceo.jpg" alt="picture of jesper">
+
+                    <p class="aboutpadding">
+                        Jesper is a 90's kiddo and is driven by good graphics and code. He went to high school and developed his sens for film producing and write the script.
+                         He started his university career in the class to devlopment of digital services but he swapped over to Interactiondesign where our budies meet. Today Jesper is more focuesd on the graphics and will work as an ixd-generator.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="huvudFooter">
+            <p>&copy; OneHabit. Some rights reserved. Updated 2013-12-17 | <a>Terms of Service</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>

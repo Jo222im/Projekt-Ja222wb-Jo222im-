@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <title>OneHabit - Fulfil your everyday life</title>
+    <link rel="Stylesheet" href="../css/Stylesheet.css" />
+    <link rel="stylesheet" href="../css/contact.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--Gör så att mobiler inte kan zooma-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> <!--Jquery för responsiv meny-->
+    <script>
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="body">
+    <header class="mainHeader">
+        <img id="logo" src="../pics/logo.png" alt="Company Logotype, One Habit" />
+        <a class="linkhead" href="../index.html"><img id="devicelogo" src="../pics/devicelogo.png" alt="Company Logotype, One Habit"></a><!--Responsivaloggan som är klickbar till index-->
+        <nav class="navigation">
+            <ul id="menu">
+                <li><a href='../index.html'><span>Home</span></a></li>
+                <li><a href='AboutUs.html'><span>About Us</span></a></li>
+                <li><a href='blog.html'><span>Blog</span></a></li>
+                <li class='active'><a href='contact.html'><span>Contact</span></a></li>
+            </ul>
+            <a href="#" id="pull">Menu</a> <!--Meny knappen som kommer upp vid mindre skärmar-->
+        </nav>
+        <div id="headerOne"><img src="../pics/test.png" alt="Header"></div>
+    </header>
+
+    <div class="mainContent">
+    
+        <div class="intrested">
+                <h2>Are you intrested in our products and want to became a customer? </h2>
+            	<p>please use the contact form below</p>
+        </div>
+        
+        <div class="textArea">
+            <div class="boxen">
+		        <div id="main" style="padding:50px 0 0 0;">
+		
+		            <!-- Form -->
+		            <form id="contact-form"  method="post" action="respond.html" >
+			            <h3>Start here</h3>
+			            <h4>Please fill in the form below.</h4>
+			            <div>
+				            <label for="name">
+					            <span>Name: (Your name or the name of your company)</span>
+					            <input placeholder="Please enter your name" id="name" name="full name" type="text" tabindex="1" required autofocus>
+				            </label>
+			            </div>
+			            <div>
+				            <label for="email">
+					            <span>Email: (required)</span>
+					            <input placeholder="Please enter your email address" id="email" name="email" type="email" tabindex="2" required>
+				            </label>
+			            </div>
+			            <div>
+				            <label for="telephone">
+					            <span>Telephone: </span>
+                                <input id="telephone" name="telephone" placeholder="Please enter your number" type="tel" tabindex="3" required>
+				            </label>
+			            </div>
+			            <div>
+				            <label for="webbsite">
+					            <span>Website: (only required if you have a company)</span>
+                                <input id="webbsite" name="webbsite" placeholder="Begin with http://" type="url" tabindex="4">
+				            </label>
+			            </div>
+			            <div>
+				            <label for="message">
+					            <span>Message: (required)</span>
+					            <textarea placeholder="Include all the details you can. Remember that you cant order any product yet" id="message" name="message" tabindex="5" required></textarea>
+				            </label>
+			            </div>
+			            <div>
+				            <button name="submit" type="submit" id="contact-submit">Send Email</button>
+			            </div>
+		            </form>
+		            <!-- /Form -->
+		        </div>
+	        </div>
+        </div>
+
+        <div class="vcard"> <!--Som gör så att google hittar oss lättare via sökmotorer-->
+            <div class="contactinfo">
+                <div class="fn org">OneHabit, Inc.</div>
+                    <div class="adr"><div class="street-address">945 5th Avenue</div>
+                        <span class="locality">New York</span>, <span class="region">NY</span>&nbsp;&nbsp;<span class="postal-code">10021</span>,
+                            <div class="phone-number"> Phone Us at (212) 556-1363</div>
+                     </div>
+
+            </div>
+            <div class="map"> <!--Google map som visar vart vårt kontor ligger-->
+                <iframe src="https://maps.google.se/maps?f=q&amp;source=s_q&amp;hl=sv&amp;geocode=&amp;q=5th+Avenue,+Fifth+Avenue+945,+New+York,+USA&amp;aq=&amp;sll=40.761667,-73.97506&amp;sspn=0.055519,0.111494&amp;ie=UTF8&amp;hq=5th+Avenue,+Fifth+Avenue+945,&amp;hnear=New+York,+USA&amp;t=m&amp;ll=40.744526,-73.98571&amp;spn=0.039017,0.051498&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.se/maps?f=q&amp;source=embed&amp;hl=sv&amp;geocode=&amp;q=5th+Avenue,+Fifth+Avenue+945,+New+York,+USA&amp;aq=&amp;sll=40.761667,-73.97506&amp;sspn=0.055519,0.111494&amp;ie=UTF8&amp;hq=5th+Avenue,+Fifth+Avenue+945,&amp;hnear=New+York,+USA&amp;t=m&amp;ll=40.744526,-73.98571&amp;spn=0.039017,0.051498&amp;z=13" style="color:#FFF;text-align:left">Bigger map</a></small>
+            </div>
+          </div>
+
+                <footer class="huvudFootern">
+                    <!--Ansvarig utgivare-->
+                    <p> &copy; OneHabit. Some rights reserved. Updated 2013-12-17 | <a>Terms of Service</a></p>
+                </footer>
+
+    </div>
+        <script src="../css/contact.js"></script> <!--JavaScript fångar fel i formuläret, så man inte kan göra fel-->
+</body>
+</html>

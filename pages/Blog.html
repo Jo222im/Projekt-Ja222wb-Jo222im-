@@ -1,0 +1,153 @@
+﻿<!doctype html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8" /> 
+    <title>OneHabit - Fulfil your everyday life</title>
+    <link rel="Stylesheet" href="../css/Stylesheet.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--Gör så att mobiler inte kan zooma-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><!--Jquery för responsiv meny-->
+    <script>
+        $(function () {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+
+            $(pull).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function () {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="body">
+	
+    <header class="mainHeader">
+        <img id="logo" src="../pics/logo.png" alt="Company Logotype, One Habit" />
+        <a class="linkhead" href="../index.html"><img id="devicelogo" src="../pics/devicelogo.png" alt="Company Logotype, One Habit"></a><!--Responsivaloggan som är klickbar till index-->
+
+        <nav class="navigation">
+            <ul class="navigation">
+                <li><a href='../index.html'><span>Home</span></a></li>
+                <li><a href='AboutUs.html'><span>About Us</span></a></li>
+                <li class='active'><a href='blog.html'><span>Blog</span></a></li>
+                <li><a href='contact.html'><span>Contact</span></a></li>
+            </ul>
+            <a href="#" id="pull">Menu</a> <!--Meny knappen som kommer upp vid mindre skärmar-->
+        </nav>
+        <div id="headerOne"><img src="../pics/test.png" alt="Header"></div>
+    </header>        
+
+    <div class="mainContent">
+
+        <div class="content">
+
+            <article id="blog1" class="blogg"><!--AnkarLänk till blog1-->
+                <header>
+                    <h2>Blog post</h2>
+                </header>
+                <footer>
+                    <p class="post-info">This blogpost was created 13 Jan 2014 by CEO - Jens Ax</p>
+                </footer>
+
+                <h3>Welcome to us</h3>
+                <p>
+                		<img class="blogpic" src="../pics/meeting.jpg" alt="Meetingroom with Chairs">
+                        <img class="blogpic2" src="../pics/meeting2.jpg" alt="Meetingroom with Chairs desaturated"> 
+                </p>
+                <p>
+                    <strong>Today</strong> we have our first meeting with our customers here in New York. For those who just found us online, we have our office on 5th Avu right by central park.
+                     Here we hit our customers around in New York to show them what's going to pop up in their stores for next season. It also discusses about the quality and product development.
+                     This is a very important stage for us when we see our company and its customers Race priotering. The results of our products will end up in that customers want to consume more and create their own signature.
+                </p>
+                <p>
+                    <strong>Updated</strong>:
+                    The meeting today went great. Our company wants to continue to have a contact with us, because our products feels modern and in time. We have gained a new customer to us as we look forward to work with.
+                     For this customer, we will stick with our website design and our design team. Thanks for a great meeting. 
+                </p> 
+
+                <p>
+                    <a href="http://www.victoriasecret.com"><img src="../pics/visc.jpeg" class="blogpic" alt="Webbsite victoriasecret"></a>
+                <p>
+                     VictoriaSecret - brand new custumer
+                </p>
+               
+           </article>
+                
+            <article id="blog2" class="blogg"><!--AnkarLänk till blog2-->
+                <header>
+                    <h2>Blog post</h2>
+                </header>
+                <footer>
+                    <p class="post-info">This blogpost ws created 24 Dec 2013 by CEO - Jesper Obrelius</p>
+                </footer>
+
+                <h3>Happy Hollidays</h3>
+               
+                <p>
+                		<img class="blogpic" src="../pics/christmasduck.jpg" alt="Phonecase with a christmasduck">
+                        <img class="blogpic2" src="../pics/pingvin.jpg" alt="a bag with a pingvin on"> 
+                </p>
+               
+               
+                <p>
+                    Hello Folks. Here I'm texting in last minute before our plain home takes of. Me and my companion going home to Sweden to celebrate christmas and have some good beers in the skislope.
+                     I hope I survive all the polarbears and penguins that live in my backyard. It can also be very cold so I hope my mom have done a new jacket of that soft polarbear fur. Jummy! 
+                </p>
+                
+                <p>
+                    <strong>BTW</strong> Thanks for a awesome year togeter. We look forward to 2014's all suprices.
+                     Are you intrest to be our first customer next year and get 30% of at your first order? It's time to contact us.  Dont be to drunk
+                </p>
+                
+                <p>
+                //Your pankcake lover
+                </p>
+
+            </article>
+
+            <article id="blog3" class="blogg">
+                <header>
+                    <h2>Blog post</h2>
+                </header>
+                <footer>
+                    <p class="post-info">This blogpost was created 17 Dec 2014 by Designteam - Caroline & Nelly</p>
+                </footer>
+
+                <h3>In the factory</h3>
+                
+                  <p>
+                   Today, Jens and Jesper went down town to get some new insperation. This is a taste of late winter collection.
+      			    what do you think?
+                  </p>
+               
+                
+                 <p>
+                		<img class="blogpic" src="../pics/wallart2.jpg" alt="phonecase with graffiti">
+                        <img class="blogpic2" src="../pics/wallart.jpg" alt="T-shirt with art of a futuristic man"> 
+                </p>
+                
+              
+                <p>
+                    //Designteam
+                </p>
+         
+           </article>
+
+        </div><!--Content div-->
+       
+        <footer class="huvudFooter">
+            <p> &copy; OneHabit. Some rights reserved. Updated 2013-12-17 | <a>Terms of Service</a></p>
+        </footer>
+
+	</div><!--MainContent div-->
+
+</body>
+</html>
