@@ -630,49 +630,55 @@ line-height: 55px;
     #left
     {
 	    margin: 0px 0 0px 0px;
-        width: 100%;
+        width: 98%;
     }
 
     #right
     {
-	    width: 100%;
+	    width: 98%;
 	    margin: 0px 0 0px 0px;
     }
 
     .blueabout
     {
-        width:100%;
+        width:98%;
         height:auto;
     }
 
     .topabout
     {
         height:auto;
-        width:100%;
+        width:98%;
+        font-size:medium;
     }
 
     .abouttext
     {
         height:auto;
-        width:100%;
+        width:98%;
+        font-size:medium;
     }
 
     .rightabout
     {
         height:auto;
-        width:100%;
+        width:98%;
     }
 
     .aboutjens
     {
         height:auto;
-        width:100%;
+        width:98%;
     }
 
+    .aboutpadding {
+    font-size:medium;
+    
+    }
     .aboutjesper
     {
         height: auto;
-        width:100%;
+        width:98%;
     }
 
     .picAbout{width:100%;}
@@ -688,6 +694,11 @@ line-height: 55px;
         width:8%;
         height:auto;
     }
+    #wrapper p 
+    {
+        padding-right:5%;
+    }
+
 }
 
 @media screen and (max-width: 1260px) 
@@ -912,12 +923,22 @@ line-height: 55px;
     }  
 }
 
+@media screen and (max-width: 659px){
+    #blogpitch
+        {
+            margin-left:5%;
+        }
+}
 @media only screen and (max-width : 480px) 
 {
+
+        /*--Index--*/
     .latestblog 
     {  
         display:none;
     }
+
+
 
         /*---About Us---*/
 
@@ -964,6 +985,11 @@ line-height: 55px;
 @media only screen and (max-width : 320px) 
 {  
 
+        /*--Index--*/
+    #blogpitch
+    {
+        margin-left:18.3%;
+    }
     .latestblog 
     {
         display:block;
@@ -974,7 +1000,7 @@ line-height: 55px;
     font-size:12px;
     margin-left: 10%;
     }
-    /*menu for mobile*/
+    /*meny för mobil*/
 
     nav li 
     {  
